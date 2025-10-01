@@ -5,7 +5,7 @@ const videoGames = [
     pegi: '12',
     price: 59.99,
     category: ['Adventure', 'RPG'],
-    platform: ['Switch'],
+    platform: ['Nintendo Switch'],
     img: 'https://example.com/zelda.jpg'
   },
   {
@@ -14,7 +14,7 @@ const videoGames = [
     pegi: '18',
     price: 69.99,
     category: ['Action', 'Adventure'],
-    platform: ['PS5'],
+    platform: ['PlayStation 5'],
     img: 'https://example.com/gow.jpg'
   },
   {
@@ -32,7 +32,7 @@ const videoGames = [
     pegi: '18',
     price: 69.99,
     category: ['RPG', 'Fantasy'],
-    platform: ['PS5', 'Xbox', 'PC'],
+    platform: ['PlayStation 5', 'Xbox', 'PC'],
     img: 'https://example.com/eldenring.jpg'
   },
   {
@@ -41,7 +41,7 @@ const videoGames = [
     pegi: '7',
     price: 49.99,
     category: ['Platformer', 'Adventure'],
-    platform: ['Switch'],
+    platform: ['Nintendo Switch'],
     img: 'https://example.com/mario.jpg'
   },
   {
@@ -50,7 +50,7 @@ const videoGames = [
     pegi: '18',
     price: 59.99,
     category: ['Adventure', 'Open World'],
-    platform: ['PS4', 'Xbox', 'PC'],
+    platform: ['PlayStation 4', 'Xbox', 'PC'],
     img: 'https://example.com/rdr2.jpg'
   },
   {
@@ -59,7 +59,7 @@ const videoGames = [
     pegi: '7',
     price: 29.99,
     category: ['Sandbox', 'Survival'],
-    platform: ['PS4', 'Xbox', 'PC', 'Switch'],
+    platform: ['PlayStation 4', 'Xbox', 'PC', 'Nintendo Switch'],
     img: 'https://example.com/minecraft.jpg'
   },
   {
@@ -68,7 +68,7 @@ const videoGames = [
     pegi: '18',
     price: 39.99,
     category: ['RPG', 'Adventure'],
-    platform: ['PS4', 'Xbox', 'PC', 'Switch'],
+    platform: ['PlayStation 4', 'Xbox', 'PC', 'Nintendo Switch'],
     img: 'https://example.com/witcher3.jpg'
   },
   {
@@ -77,7 +77,7 @@ const videoGames = [
     pegi: '3',
     price: 59.99,
     category: ['Sports'],
-    platform: ['PS5', 'Xbox', 'PC', 'Switch'],
+    platform: ['PlayStation 5', 'Xbox', 'PC', 'Nintendo Switch'],
     img: 'https://example.com/fifa23.jpg'
   },
   {
@@ -86,7 +86,7 @@ const videoGames = [
     pegi: '18',
     price: 69.99,
     category: ['Shooter', 'Action'],
-    platform: ['PS5', 'Xbox', 'PC'],
+    platform: ['PlayStation 5', 'Xbox', 'PC'],
     img: 'https://example.com/codmw2.jpg'
   },
   {
@@ -95,7 +95,7 @@ const videoGames = [
     pegi: '3',
     price: 49.99,
     category: ['Simulation', 'Social'],
-    platform: ['Switch'],
+    platform: ['Nintendo Switch'],
     img: 'https://example.com/animalcrossing.jpg'
   },
   {
@@ -104,7 +104,7 @@ const videoGames = [
     pegi: '12',
     price: 0.0,
     category: ['Shooter', 'Battle Royale'],
-    platform: ['PS5', 'Xbox', 'PC', 'Switch'],
+    platform: ['PlayStation 5', 'Xbox', 'PC', 'Nintendo Switch'],
     img: 'https://example.com/fortnite.jpg'
   },
   {
@@ -113,7 +113,7 @@ const videoGames = [
     pegi: '18',
     price: 59.99,
     category: ['RPG', 'Sci-Fi'],
-    platform: ['PS5', 'Xbox', 'PC'],
+    platform: ['PlayStation 5', 'Xbox', 'PC'],
     img: 'https://example.com/cyberpunk2077.jpg'
   },
   {
@@ -122,7 +122,7 @@ const videoGames = [
     pegi: '12',
     price: 0.0,
     category: ['Shooter', 'Team-Based'],
-    platform: ['PS5', 'Xbox', 'PC', 'Switch'],
+    platform: ['PlayStation 5', 'Xbox', 'PC', 'Nintendo Switch'],
     img: 'https://example.com/overwatch2.jpg'
   },
   {
@@ -149,7 +149,7 @@ const videoGames = [
     pegi: '12',
     price: 59.99,
     category: ['Fighting'],
-    platform: ['PS5', 'Xbox', 'PC'],
+    platform: ['PlayStation 5', 'Xbox', 'PC'],
     img: 'https://example.com/sf6.jpg'
   },
   {
@@ -158,7 +158,7 @@ const videoGames = [
     pegi: '3',
     price: 69.99,
     category: ['Racing', 'Simulation'],
-    platform: ['PS5'],
+    platform: ['PlayStation 5'],
     img: 'https://example.com/gt7.jpg'
   },
   {
@@ -167,7 +167,7 @@ const videoGames = [
     pegi: '16',
     price: 49.99,
     category: ['RPG', 'Fantasy'],
-    platform: ['PS4', 'Xbox', 'PC'],
+    platform: ['PlayStation 4', 'Xbox', 'PC'],
     img: 'https://example.com/ds3.jpg'
   },
   {
@@ -176,7 +176,7 @@ const videoGames = [
     pegi: '7',
     price: 59.99,
     category: ['Shooter', 'Multiplayer'],
-    platform: ['Switch'],
+    platform: ['Nintendo Switch'],
     img: 'https://example.com/splatoon3.jpg'
   }
 ]

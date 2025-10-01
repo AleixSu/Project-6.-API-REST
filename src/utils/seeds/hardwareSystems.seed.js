@@ -1,13 +1,12 @@
+const mongoose = require('mongoose')
+require('dotenv').config()
 const HardwareSystem = require('../../api/models/hardwareSystems')
 const hardwareSystemsSeed = require('../../data/hardwareSystems')
-const mongoose = require('mongoose')
 
-const launchHsSeed = async () => {
+const launchHsSeed = async (firstSeed, secondSeed) => {
   try {
     console.log('Connection in process...')
-    await mongoose.connect(
-      'mongodb+srv://aleixsu_db_user:QtatdOF9ptsue9Hy@cluster0.zuam1fl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-    )
+    await mongoose.connect(process.env.DB2_URL)
     console.log('Database connection established')
     await HardwareSystem.collection.drop()
     console.log('Old collection removed from database')

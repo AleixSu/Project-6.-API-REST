@@ -1,23 +1,29 @@
+const hardwareSystemsSeed = require('../../data/hardwareSystems')
 const videoGames = require('../../data/videoGames')
 
-const videoGameSeed = []
+const seedHelper = (insertedSystems) => {
+  const dataSystems = []
 
-const switch_ID = '68d6ee0786b5936851d7cf22'
-const ps4_ID = '68d6ee0786b5936851d7cf20'
-const ps5_ID = '68d6ee0786b5936851d7cf1f'
-const xbox_ID = '68d6ee0786b5936851d7cf21'
-const pc_ID = '68d6ee0786b5936851d7cf23'
+  for (const system of hardwareSystemsSeed) {
+    dataSystems.push(system.name)
+  }
+  const systemsId = {}
+  for (const system of insertedSystems) {
+    if (dataSystems.includes(system.name)) {
+      systemsId[system.name] = system._id
+    }
+  }
+  const result = systemsId
 
-for (const videogame of videoGames) {
-  videogame.platform = videogame.platform.map((p) => {
-    if (p === 'Switch') return switch_ID
-    if (p === 'PS4') return ps4_ID
-    if (p === 'PS5') return ps5_ID
-    if (p === 'Xbox') return xbox_ID
-    if (p === 'PC') return pc_ID
-    return p
-  })
-  videoGameSeed.push(videogame)
-  console.log(videoGameSeed)
+  const videoGameSeed = []
+
+  for (const videogame of videoGames) {
+    videogame.platform = videogame.platform.map((p) => {
+      return result[p] || p
+    })
+    videoGameSeed.push(videogame)
+  }
+  return videoGameSeed
 }
-module.exports = videoGameSeed
+
+module.exports = seedHelper

@@ -26,7 +26,8 @@ Permite crear, leer, actualizar y eliminar videojuegos.
 3. Configura las variables de entorno en un archivo `.env`:
 
    ```env
-   MONGO_URI=mongodb://localhost:27017/videogamesDB
+   DB2_URL=mongodb+srv://<USER>:<PASSWORD>@cluster0.zuam1fl.mongodb.net/videogamesDB?retryWrites=true&w=majority&appName=Cluster0
+   PORT=3000
    ```
 
 4. Inicia el servidor:

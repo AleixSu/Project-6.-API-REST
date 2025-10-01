@@ -5,7 +5,7 @@ const hardwareSystemSchema = mongoose.Schema(
     name: { type: String, required: true, trim: true },
     company: { type: String, required: true, trim: true },
     releaseYear: { type: Number, required: true, trim: true },
-    launchPrice: { type: Number, required: true, trim: true },
+    launchPrice: { type: Number, trim: true },
     img: { type: String, required: true }
   },
   {
