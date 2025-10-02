@@ -101,7 +101,6 @@ module.exports = {
   getVideogames,
   getVideogame,
   postVideogame,
-  updateVideogame,
   updateVideogameAdd,
   deleteVideogame
 }
