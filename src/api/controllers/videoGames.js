@@ -62,18 +62,23 @@ const updateVideogame = async (req, res, next) => {
   }
 }
 
+/* 
+$set: Crea un nuevo campo si no existía a partir del valor específicado. Si ya existe lo actualiza. Mongo lo hace por defecto sin tener que poner $set en el código. USO: Asigna o modifica valores del campo, incluyendo la creación de campos y adición de nuevos datos a un documento.
+$addToSet: Añade elementos únicos a la matriz. Es decir si no existe ya ese valor lo mete, si no no. Ideal para mantener un conjunto de valores únicos dentro de una matriz. USO: Asegura que no haya duplicados en una array, añadiendo un nuevo valor solo si es distinto a los elementos existentes
+*/
+
 const updateVideogameAdd = async (req, res, next) => {
   try {
     const { id } = req.params
-    const { category, platform, ...rest } = req.body //Guardamos en variables los valores de req.body de category y platform espécifacmentey usamos rest para las que no se aplicará el set ni el addtoset.
+    const { category, platform, ...rest } = req.body //Hacemos destructuring de req.body con las claves que nos envíen y guardamos en variables separadas category y platform que son las que nos interesan y el resto las guardamos mediante "...rest"
 
-    const updateData = { ...rest } //Creamos una variable "vacía" de las claves a las que aplicaremos set y addtoset, es decir solo metemos el "resto"
+    const updateData = { ...rest } //Empezamos creando el objeto de la actualización solo con lo que va con "set" (que lo hace mongo por defecto) y esos serán las claves que no nos interesa pasar por addtoset.
 
     if (category) {
-      //En el caso de que req.body sea category
+      //En el caso de el category que nos envían desde req.body no sea null o undefined:
       updateData.$addToSet = {
-        //usamos el operador addToSet para añadir elementos sin duplicarlos
-        ...(updateData.$addToSet || {}), //* Leer más abajo la explicación
+        //Seguimos creando el objeto de la actualización pero usamos el operador addToSet para añadir elementos sin duplicarlos
+        ...(updateData.$addToSet || {}), //*Usamos los 3 puntos para copiar las claves que hemos metido en la linea 70 y usamos || por si antes no habíamos inicializado el addtoset. Leer más abajo la explicación.
         category: { $each: category } // añade cada uno de los elementos uno por uno al array
       }
     }
