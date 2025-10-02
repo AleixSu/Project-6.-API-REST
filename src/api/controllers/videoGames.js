@@ -39,28 +39,6 @@ const postVideogame = async (req, res, next) => {
       .json({ message: 'Invalid data, could not create videogame' })
   }
 }
-const updateVideogame = async (req, res, next) => {
-  try {
-    const { id } = req.params
-    const newVideogame = new VideoGame(req.body)
-    newVideogame._id = id
-    const videogameUpdated = await VideoGame.findByIdAndUpdate(
-      id,
-      newVideogame,
-      {
-        new: true
-      }
-    )
-    if (!videogameUpdated) {
-      return res.status(404).json({ message: 'Videogame not found' })
-    }
-    return res.status(200).json(videogameUpdated)
-  } catch (error) {
-    return res
-      .status(400)
-      .json({ message: 'Invalid data, could not update videogame' })
-  }
-}
 
 /* 
 $set: Crea un nuevo campo si no existía a partir del valor específicado. Si ya existe lo actualiza. Mongo lo hace por defecto sin tener que poner $set en el código. USO: Asigna o modifica valores del campo, incluyendo la creación de campos y adición de nuevos datos a un documento.

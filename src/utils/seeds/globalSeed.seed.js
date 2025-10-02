@@ -1,5 +1,5 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
-require.dotenv().config()
 const seedHelper = require('../seedHelpers/seedHelper')
 const { hardwareArray, videogameArray } = require('../../data/globalData')
 
@@ -12,7 +12,6 @@ const launchSeed = async (array1, array2) => {
     await array1.model.collection.drop()
     console.log('Old collection removed from database')
     const insertedSystems = await array1.model.insertMany(array1.array)
-    console.log(insertedSystems)
 
     console.log(`${array1.name} succesfully seeded`)
 
