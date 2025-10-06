@@ -20,7 +20,7 @@ const getVideogame = async (req, res, next) => {
     if (!videoGame) {
       return res.status(404).json({ message: 'Videogame not found' })
     }
-    return res.status(200).json(videoGame.category)
+    return res.status(200).json(videoGame)
   } catch (error) {
     console.error('Data retrieval failed:', error)
     return res.status(400).json('Data retrieval failed')

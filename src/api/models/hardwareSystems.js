@@ -4,8 +4,8 @@ const hardwareSystemSchema = mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
     company: { type: String, required: true, trim: true },
-    releaseYear: { type: Number, required: true, trim: true },
-    launchPrice: { type: Number, trim: true },
+    releaseYear: { type: Number, required: true },
+    launchPrice: { type: Number }, // Si la variable es number no hace falta trimear.
     img: { type: String, required: true }
   },
   {
